@@ -9,19 +9,23 @@ export const ContainerTitleText = (props) => {
 }
 
 export const HalfContainer = (props) => {
-    return <li className="container-component-half"><div className="half-container">{props.children}</div></li>
+    return <div className="half-container">{props.children}</div>
 }
 
 export const ContainerDivider = () => {
     return <div className="container-divider"></div>
 }
 
-export const ContainerRow = (props) => {
-    return <ul className="container-row">{props.children}</ul>
+export const ContainerTwoColumn = (props) => {
+    return <div className="container-row-half">{props.children}</div>
+}
+
+export const ContainerThreeRow = (props) => {
+    return <div className="container-row-third">{props.children}</div>
 }
 
 export const ThirdContainer = (props) => {
-    return <li className="container-component-third"><div className="third-container">{props.children}</div></li>
+    return <div className="third-container">{props.children}</div>
 }
 
 

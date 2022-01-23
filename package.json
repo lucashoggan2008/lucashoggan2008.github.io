@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy":"npm run build && gh-pages -d build",
-    "update":"git add . && git commit -m \"commit\" && git push origin master"
+    "update":"git add . && git commit -m \"commit\" && git push origin master",
+    "update-f": "npm run update && npm run deploy"
   },
   "eslintConfig": {
     "extends": [
