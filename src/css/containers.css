@@ -1,0 +1,53 @@
+:root {
+    --container-border: 3px solid var(--tritary-color);
+}
+
+.full-container {
+    background-color: var(--secondary-color);
+    width: 90%;
+    min-height: 200px;
+    border-radius: 20px;
+    display: block;
+    margin: 10px auto;
+    border: var(--container-border);
+}
+
+
+
+.half-container, .third-container {
+    background-color: var(--secondary-color);
+    width: 100%;
+    min-height: 100px;
+    display: block;
+    border-radius: 20px;
+    border:var(--container-border);
+}
+
+.container-divider {
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: var(--tritary-color);
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+
+}
+
+.container-row {
+    display: flex;
+    margin: 10px 5%;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+    width: 90%;
+}
+.container-component-half {
+    display: inline-block;
+    width: 49%;
+    
+}
+
+.container-component-third {
+    display: inline-block;
+    width: 30%;
+}
