@@ -47,13 +47,17 @@
     --secondary-color: #428af5;
     --primary-color: #a6ffc6;
     --tritary-color: white; 
+    --link-hover-color: grey;
 
 }
+
+
 
 body {
     margin:0;
     padding:0;
     background-color: var(--primary-color);
+    
 }
 
 .primary-bg {
@@ -70,6 +74,16 @@ body {
 
 .text-p {
   color: var(--primary-color)
+}
+
+.link {
+  text-decoration: none;
+  color: var(--tritary-color);
+}
+
+.link:hover {
+  color: var(--primary-color);
+  text-shadow: 2px 2px black;
 }
 
     </style>

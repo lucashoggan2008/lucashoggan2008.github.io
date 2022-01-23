@@ -13,9 +13,10 @@
 }
 
 .align-text-center {
-  text-align: center;
   display: block;
   margin: 10px auto;
+  text-align: center;
+  max-width: 40rem;
 }
 
 .align-text-right {

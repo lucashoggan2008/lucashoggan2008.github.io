@@ -1,7 +1,10 @@
 
 
 
-
+@keyframes colorchange {
+    from {background-color:var(--primary-color)}
+    to {background-color:var(--secondary-color)}
+}
 
 @media(max-width: 400px) {
     .navbar-title {
@@ -23,9 +26,12 @@
     background-color: var(--secondary-color);
     border-bottom: 2px solid var(--tritary-color);
     .navbar-title {
-        margin-left: 2rem;
+        
         font-family: 'Big Shoulders Display', sans-serif;
         display: inline-block;
+        .text-p {
+            animation: navbar-title-color-change 5s;
+        }
     }
 }
 
@@ -59,7 +65,33 @@ div.flex-contain {
     margin: 0;
 }
 
+.nav-icon-link {
+    width: 60px;
+    aspect-ratio: 1;
+    background: var(--primary-color);
+    margin: 0 5px 16px 5px;
+    border-radius: 10px;
+    border: 2px solid var(--tritary-color);
+    transition: background-color 2s ease-out 100ms;
+    
+}
 
+.nav-icon-link:hover {
+   background-color: var(--secondary-color); 
+}
+
+.nav-icons-bar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.nav-icon {
+    width: 50px;
+    aspect-ratio: 1;
+    display:block;
+    margin: 5px auto;
+    
+}
 
 @media(max-width:700px) {
     .social-icon {
@@ -80,6 +112,7 @@ div.flex-contain {
         padding-right: 15px;
     }
 }
+
 
 
 
