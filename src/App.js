@@ -7,6 +7,7 @@ import {
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Testing from './pages/Testing'
+import Projects from './pages/Projects'
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>    
       </Router>
     </div>
