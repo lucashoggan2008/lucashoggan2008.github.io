@@ -4,25 +4,26 @@ import {
   Routes,
   
 } from "react-router-dom";
+import './styles.css'
 import Home from './pages/Home'
-import Navbar from './components/Navbar'
-import Testing from './pages/Testing'
+import AboutMe from './pages/AboutMe'
 import Projects from './pages/Projects'
+
 
 
 
 function App() {
   
   return (
-    <div>
+    
       <Router>
-        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route path="/about-me" element={<AboutMe />}/>
           <Route path="/projects" element={<Projects />} />
         </Routes>    
       </Router>
-    </div>
+    
   );
 }
 

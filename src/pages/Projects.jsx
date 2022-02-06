@@ -1,39 +1,33 @@
 import React from 'react';
-import PageBody from "../components/PageBody";
-import {FullContainer, ContainerDivider, ContainerTwoColumn, HalfContainer} from '../components/Containers'
-import {TitleText, ContentText} from '../components/Text'
-import {Link} from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 const Projects = () => {
-  return <PageBody>
-      <FullContainer>
-        <TitleText>Projects</TitleText>
-      </FullContainer>
+  return <div className="page">
+      <Navbar curPage="projects" />
+      <div className="page-body">
+          <div className="container-holder">
+              <div className="page-title-container">
+                  <h1 className="lrg-text-box text-center">Projects Made by Lucas Hoggan</h1>
+              </div>
+              <div className="container">
+                  <div className="container-title">Personal Portfolio Site</div>
+                  <div className="container-divider"></div>
+                  <div className="text-holder">
+                      <div className="med-text-box text-center">The site is about showing what my abilities are, challenging myself, to diplay my projects, intrests and Just a overall site about myself and What i am capable of, The site is built off the React JavaScript framework and Hosted on github pages, it and uses scss to style it.</div>
+                  </div>
+                  </div>
 
-      <ContainerDivider />
-
-      <ContainerTwoColumn>
-
-        <HalfContainer>
-
-            <TitleText>Personal Portfolio Site</TitleText>
-
-            <ContainerDivider /> 
-
-            <ContentText>The site is about showing what my abilities are, challenging myself, to display my projects, intrests and Just a overall site about myself and What i am capable of. The site is built off the React JavaScript framework and Hosted on github pages, it uses both .scss and .css files to style it </ContentText>
-
-        </HalfContainer>
-
-        <HalfContainer>
-            <TitleText>Product Inventory App</TitleText>
-            <ContainerDivider></ContainerDivider>
-            <ContentText>This was an app built off the in-built python libary called tkinter. It used multible json files to represent both products and materials data. It had a minimal design. It worked by having categorys which was basicily a list with all the items in it. The items were just a python dicionsry with attributes like; price, amount, name, ect.There were two types of categorys; product categorys and supply categorys. All the product categorys were stored in a file called "products.json" and The supplies in the so called "supplies.json"</ContentText>
-        </HalfContainer>
-
-        <HalfContainer></HalfContainer>
-
-      </ContainerTwoColumn>
-  </PageBody>;
+                  <div className="container">
+                      <div className="container-title">Product Inventory App</div>
+                      <div className="container-divider"></div>
+                      <div className="text-holder">
+                          <div className="med-text-box text-center">This was a tkinter python project which also made use of JSON to store data. It would hold two type of categorys, product categorys and supply category. The category would hold their type of item and you could change the data by adding items, delete items, change items, add categorys, delete categorys, ect.</div>
+                      </div>
+                  </div>
+              
+          </div>
+      </div>
+  </div>;
 };
 
 export default Projects;

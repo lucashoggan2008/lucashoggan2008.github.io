@@ -1,48 +1,34 @@
 import React from 'react';
-import '../css/navbar.css'
-import {Link} from 'react-router-dom'
 
-const facebookIcon = <img className="social-icon" src={process.env.PUBLIC_URL+"icons/facebook-icon.png"} alt="Facebook logo" />
-const twitterIcon = <img className="social-icon"  src={process.env.PUBLIC_URL+"icons/twitter-icon.png"} alt="Instagram logo" />
-const aboutMeIcon = <img src={process.env.PUBLIC_URL+"icons/about-me-icon.svg"} alt="about me" className="nav-icon" />
-const projectIcon = <img src={process.env.PUBLIC_URL+"icons/projects-icon.svg"} alt="project" className="nav-icon" />
-const homePageIcon = <img src={process.env.PUBLIC_URL+"icons/home-page-icon.svg"} alt="hello" className="nav-icon" />
+import {Link} from 'react-router-dom';
 
+const facebookIcon = <img className="nav-selc-icon" src={process.env.PUBLIC_URL+"icons/facebook-icon.png"} alt="Facebook logo" />
+const twitterIcon = <img className="nav-selc-icon"  src={process.env.PUBLIC_URL+"icons/twitter-icon.png"} alt="Instagram logo" />
+const aboutMeIcon = <img src={process.env.PUBLIC_URL+"icons/about-me-icon.svg"} alt="about me" className="nav-selc-icon" />
+const projectIcon = <img src={process.env.PUBLIC_URL+"icons/projects-icon.svg"} alt="project" className="nav-selc-icon" />
+const homePageIcon = <img src={process.env.PUBLIC_URL+"icons/home-page-icon.svg"} alt="hello" className="nav-selc-icon" />
 
-
-const Navbar = () => {
-  return (<div className="navbar">
-      <div className="flex-contain">
-      <NavigationIconsBar />
-      <Link className="link" to='/'><h1 className="navbar-title text">Lucas <span className="text-p">Hoggan</span></h1></Link>
-        <SocialIconsBar />
-        
+const Navbar = (props) => {
+    let classNames = {
+        "home":"nav-selc-link",
+        "projects":"nav-selc-link",
+        "about-me":"nav-selc-link"
+    }
+    if (props.curPage in classNames) {
+        classNames[props.curPage]+= " nav-selc-link-on"
+    }
+  return <nav className="nav">
+      <Link to="/" className="text-link"><h2 className="title-text">Lucas <span className="text-s">Hoggan</span> </h2></Link>
+        <div className="nav-selc">
+            <Link to="/about-me" className={classNames["about-me"]}>{aboutMeIcon}</Link>
+            <Link to="/projects" className={classNames["projects"]}>{projectIcon}</Link>
+            <Link to="/" className={classNames["home"]}>{homePageIcon}</Link>
         </div>
-  </div>);
+        <div className="nav-selc">
+            <Link to="/" className="nav-selc-link social-icon facebook-icon">{facebookIcon}</Link>
+            <Link to="/" className="nav-selc-link social-icon twitter-icon">{twitterIcon}</Link>
+        </div>
+  </nav>;
 };
 
-const SocialIconsBar = () => {
-    return (
-        <ul className="social-list">
-            <li className="social-list-item">
-                <a rel="noreferrer" target="_blank" href="https://twitter.com/lucashoggan">{twitterIcon}</a>
-            </li>
-            <li className="social-list-item">
-                <a rel="noreferrer" target="_blank" href="https://www.facebook.com/profile.php?id=100076263414741">{facebookIcon}</a>
-            </li>
-        </ul>
-    )
-}
-
-
-
-const NavigationIconsBar =  () => {
-    return (
-        <div className="nav-icons-bar">
-            <Link to="/about-me" className="nav-icon-link">{aboutMeIcon}</Link>
-            <Link to="/projects" className="nav-icon-link">{projectIcon}</Link>
-            <Link to="/" className="nav-icon-link">{homePageIcon}</Link>
-        </div>
-    )
-}
 export default Navbar;
