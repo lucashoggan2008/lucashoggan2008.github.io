@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <div className="page">
         <Navbar curPage={"home"} />
+        
     <div className="page-body">
         <div className="container-holder">
         <div className="page-title-container">

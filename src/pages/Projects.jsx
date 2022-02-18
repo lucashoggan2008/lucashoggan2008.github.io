@@ -6,7 +6,7 @@ const Projects = () => {
       <Navbar curPage="projects" />
       <div className="page-body">
           <div className="container-holder">
-              <div className="page-title-container">
+              <div className="page-title-container" id="page-title-container">
                   <h1 className="lrg-text-box text-center">Projects Made by Lucas Hoggan</h1>
               </div>
               <div className="container">

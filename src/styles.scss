@@ -21,6 +21,10 @@ body {
 
     4. typography
 
+    5. crypto widget
+
+    6. footer
+
     last - media selectors
 
 */
@@ -192,16 +196,12 @@ body {
     transition: text-shadow 300ms ease-in;
 }
 
-.text-link:hover,
-.text-link:focus {
+.text-link:hover {
     color: var(--color-one);
-    text-shadow: 4px 4px var(--color-three);
+    text-shadow: 2px 2px var(--color-three);
 }
 
-.text-link:focus {
-    border: 1px solid black; 
-     
-}
+
 
 .container-title {
     color: var(--color-three);
@@ -239,6 +239,74 @@ body {
 .text-center {
     text-align: center;
 }
+
+/* 5. crypto widget */
+
+
+.coin-marquee-item:hover {
+    .coin-marquee-item-name {
+        color: var(--color-two)
+    }
+    .coin-marquee-item-price {
+        color: var(--color-two)
+    }
+}
+
+/* 6. footer */
+
+.footer {
+    background-color: #1e2952;
+    width: 100%;
+    border-top: 2.5px solid var(--color-three);
+    transition: border-top-color 300ms ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer:hover,
+.footer:focus {
+    border-top-color: var(--color-four);
+}
+
+
+.footer-page-selc {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .page-selc-link {
+        color: white;
+        margin: 0.2rem;
+        padding: 0.1rem 0.3rem;
+        background-color: #1e2952;
+        border-radius: 5px;
+    }
+
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.footer-row-col {
+    
+    background-color: var(--color-one);
+    border-radius: 3px;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    .footer-row-col-title {
+        text-align: center;
+        font-size: 1.3rem;
+        color: white;
+        margin: 0.2rem 0;
+    }
+}
+
+
 
 /* media selectors */
 
