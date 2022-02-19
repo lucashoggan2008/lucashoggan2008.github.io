@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -27,8 +26,9 @@ const Footer = () => {
         <div className="footer-row-col">
             <div className="footer-page-selc">
                 <div className="footer-row-col-title">Social Acounts</div>
-                <Link className="page-selc-link text-link" to="/">Facebook</Link>
-                <Link className="page-selc-link text-link" to="/">Twitter</Link>
+                <a target = "_blank" className="page-selc-link text-link" href="https://www.facebook.com/profile.php?id=100076263414741">Facebook</a>
+                <a target = "_blank" className="page-selc-link text-link" href="https://twitter.com/lucashoggan">Twitter</a>
+                <a target = "_blank" className="page-selc-link text-link" href="https://www.instagram.com/senor_hoggan/">Instagram</a>
             </div>
         </div>
       </div>

@@ -1,6 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* SCSS HEX */
+$maximum-yellow-red: #f6bd60ff;
+$linen: #f7ede2ff;
+$baby-pink: #f5cac3ff;
+$morning-blue: #84a59dff;
+$light-coral: #f28482ff;
+$tuscany: #BB9590;
+$phthalo-green: #16302B;
+$fern-green: #607744;
+$firefly: #092327;
+$wisteria-purple: #c3acce;
+$ice-cold: #B3F2DD;
+$hemlock: #656839;
+$iris: #6F58C9;
+$mojo: #bb4430;
+$light-burgundy: #b33951;
+$seal-brown: #2e0f15;
+$text-color: $firefly;
+
+
+
+
 body {
     margin: 0;
-    background-color: var(--color-one);
+    background-color: $firefly;
     font-family: "Big Shoulders Display", sans-serif;
 }
 
@@ -34,9 +57,9 @@ body {
 
 .nav {
     position: fixed;
-    background-color: var(--color-two);
+    background-color: $ice-cold;
     width: 100%;
-    border-bottom: 4px solid var(--color-five);
+    border-bottom: 4px solid $iris;
     display: flex;
     padding: 1rem 3%;
     justify-content: space-around;
@@ -45,19 +68,19 @@ body {
 }
 
 .nav:hover {
-    border-bottom-color: var(--color-three)
+    border-bottom-color: $ice-cold;
 }
 
 /* 1.1 navbar title text */
 
 .nav .title-text {
-    color: var(--color-five);
+    color: $iris;
     font-size: 2rem;
 
     
 
     .text-s {
-        color: var(--color-one)
+        color: $firefly
     }
     
 }
@@ -66,7 +89,7 @@ body {
 
 .nav .nav-selc {
     display: flex;
-    background-color: var(--color-four);
+    background-color: $hemlock;
     flex-wrap: wrap;
     border-radius: 20px;
     margin:  0 10px;
@@ -98,14 +121,14 @@ body {
     aspect-ratio: 1;
     padding: 10px;
     margin: 5px;
-    background-color: var(--color-one);
+    background-color: $firefly;
     border-radius: 40px;
     transition: background-color 500ms ease-in;
 }
 
 .nav-selc-link:not(.social-icon):hover,
 .nav-selc-link:not(.social-icon):focus {
-    background-color: var(--color-five)
+    background-color: $mojo
 }
 
 .facebook-icon:hover,
@@ -121,13 +144,13 @@ body {
 .nav-selc-link-on,
 .nav-selc-link:focus
  { /* link if is the link of the current page */
-    border: 1px solid var(--color-three)
+    border: 1px solid $ice-cold
 }
 
 /* 2. pagebody */
 
 .page-body {
-    background-color: var(--color-one);
+    background-color: $firefly;
     width: 100%;
     aspect-ratio: 1;
     padding-top: 5%;
@@ -152,11 +175,11 @@ body {
 .container {
     display: block;
     margin: 1.5rem;
-    background-color: var(--color-four);
+    background-color: $wisteria-purple;
     min-width: 50px;
     min-height: 50px;
     flex-grow: 1;
-    border: 2px solid var(--color-three);
+    border: 2px solid $light-coral;
     transition: border-color 300ms ease-out;
     padding: 1rem;
 }
@@ -164,22 +187,23 @@ body {
 .container-divider {
     display: block;
     width: 90%;
-    height: 5px;
-    background-color: var(--color-one);
+    height: 0.25rem;
+    background-color: $phthalo-green;
     margin: 1rem auto;
+    border-radius: 3px;
 
 }
 
 .container:hover,
 .page-title-container:hover {
-    border-color: var(--color-five)
+    border-color: $iris
 }
 
 .page-title-container {
     flex-grow: 1;
     min-height: 2rem;
-    background-color: var(--color-four);
-    border: 2px solid var(--color-three);
+    background-color: $wisteria-purple;
+    border: 2px solid $light-coral;
     transition: border-color 300ms ease-out;
     padding: 1rem;
     display: block;
@@ -193,18 +217,18 @@ body {
 
 .text-link {
     text-decoration: none;
-    transition: text-shadow 300ms ease-in;
+    transition: text-shadow 300ms ease-in, color 550ms ease-in;
 }
 
 .text-link:hover {
-    color: var(--color-one);
-    text-shadow: 2px 2px var(--color-three);
+    color: $firefly;
+    text-shadow: 2px 2px $ice-cold;
 }
 
 
 
 .container-title {
-    color: var(--color-three);
+    color: $seal-brown;
     font-size: 2.5rem;
     text-align: center;
 }
@@ -217,13 +241,13 @@ body {
 }
 
 .med-text-box {
-    color: var(--color-three);
+    color: $seal-brown;
     font-size: 1.75rem;
     margin: 20px;
 }
 
 .lrg-text-box {
-    color: var(--color-three);
+    color: $seal-brown;
     font-size: 3rem;
     margin: 25px;
 }
@@ -245,10 +269,10 @@ body {
 
 .coin-marquee-item:hover {
     .coin-marquee-item-name {
-        color: var(--color-two)
+        color: $wisteria-purple
     }
     .coin-marquee-item-price {
-        color: var(--color-two)
+        color: $wisteria-purple
     }
 }
 
@@ -257,7 +281,7 @@ body {
 .footer {
     background-color: #1e2952;
     width: 100%;
-    border-top: 2.5px solid var(--color-three);
+    border-top: 2.5px solid $ice-cold;
     transition: border-top-color 300ms ease-out;
     display: flex;
     flex-direction: column;
@@ -266,7 +290,7 @@ body {
 
 .footer:hover,
 .footer:focus {
-    border-top-color: var(--color-four);
+    border-top-color: $hemlock;
 }
 
 
@@ -285,6 +309,12 @@ body {
 
 }
 
+.page-selc-link:hover,
+.page-selc-link:focus {
+    text-shadow: 2px 2px greenyellow;
+    color: transparent;
+}
+
 .footer-row {
     display: flex;
     flex-wrap: wrap;
@@ -295,7 +325,7 @@ body {
 
 .footer-row-col {
     
-    background-color: var(--color-one);
+    background-color: $firefly;
     border-radius: 3px;
     margin: 0.5rem 1rem 0.5rem 1rem;
     .footer-row-col-title {

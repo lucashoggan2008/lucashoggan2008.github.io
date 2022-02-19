@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {Link} from 'react-router-dom';
 
 const facebookIcon = <img className="nav-selc-icon" src={process.env.PUBLIC_URL+"icons/facebook-icon.png"} alt="Facebook logo" />
@@ -25,8 +23,8 @@ const Navbar = (props) => {
             <Link to="/" className={classNames["home"]}>{homePageIcon}</Link>
         </div>
         <div className="nav-selc">
-            <Link to="/" className="nav-selc-link social-icon facebook-icon">{facebookIcon}</Link>
-            <Link to="/" className="nav-selc-link social-icon twitter-icon">{twitterIcon}</Link>
+            <a target = "_blank" className="nav-selc-link social-icon facebook-icon" href="https://www.facebook.com/profile.php?id=100076263414741">{facebookIcon}</a>
+            <a target = "_blank" className="nav-selc-link social-icon twitter-icon" href="https://twitter.com/lucashoggan">{twitterIcon}</a>
         </div>
   </nav>;
 };
