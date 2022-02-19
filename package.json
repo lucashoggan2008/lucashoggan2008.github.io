@@ -2,7 +2,7 @@
   "name": "pages-test",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://lucashoggan2008.github.io",
+  "homepage": "https://lucashoggan2008.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy":"npm run build && gh-pages -d build",
-    "update":"git add . && git commit -m \"commit\" && git push origin master",
+    "deploy": "npm run build && gh-pages -d build",
+    "update": "git add . && git commit -m \"commit\" && git push origin master",
     "update-f": "npm run update && npm run deploy"
   },
   "eslintConfig": {
