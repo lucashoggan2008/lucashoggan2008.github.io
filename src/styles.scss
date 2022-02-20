@@ -65,6 +65,7 @@ body {
     justify-content: space-around;
     align-items: center;
     transition: border-bottom-color 300ms ease-out;
+    z-index: 1;
 }
 
 .nav:hover {
@@ -85,12 +86,7 @@ body {
     
 }
 
-.nav-cube-container {
-    width: 4rem;
-    aspect-ratio: 1;
-    background-color: $iris;
-    border: 2px solid $firefly;
-}
+
 
 /* 1.2 nav selection */
 
@@ -216,6 +212,17 @@ body {
     display: block;
     margin: 1.5rem;
     width: 100%;
+}
+
+.cube-container {
+    width: 4rem;
+    aspect-ratio: 1;
+    background-color: $iris;
+    border: 5px solid $seal-brown;
+    display: inline-flex;
+    position: fixed;
+    margin-top: 5rem;
+    margin-left: 5px;
 }
 
 

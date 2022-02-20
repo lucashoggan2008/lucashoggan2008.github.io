@@ -1,12 +1,51 @@
 import Navbar from '../components/Navbar'
+import {useRef, useState} from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+
+const MovingBox = (props) => {
+  const mesh = useRef()
+  const [hover, setHover] = useState(false);
+  const [active, setActive] = useState(false);
+
+  useFrame(() => {
+      mesh.current.rotation.x += 0.01
+      mesh.current.rotation.y += 0.01
+  })
+
+  return (
+      <mesh
+      {...props}
+      ref={mesh}
+      onPointerOver={event => setHover(true)}
+      onPointerOut={event => setHover(false)}
+      >
+          <boxGeometry args={[1, 2, 3]} />
+          <meshStandardMaterial color="#B3F2DD" />
+      </mesh>
+
+  )
+}
 
 const Home = () => {
   return (
     <div className="page">
+
+      
         <Navbar curPage={"home"} />
+
+        
         
     <div className="page-body">
+
+    <div className="cube-container">
+          <Canvas>
+            <ambientLight />
+            <MovingBox scale={[2.5, 1.5, 1]} />
+          </Canvas>
+      </div>
+      
         <div className="container-holder">
+        
         <div className="page-title-container">
           <h1 className="lrg-text-box text-center">The Home of Lucas Hoggan</h1>
         </div>

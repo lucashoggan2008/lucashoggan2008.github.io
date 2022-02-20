@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom';
-import {useRef, useState} from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+
 
 const facebookIcon = <img className="nav-selc-icon" src={process.env.PUBLIC_URL+"icons/facebook-icon.png"} alt="Facebook logo" />
 const twitterIcon = <img className="nav-selc-icon"  src={process.env.PUBLIC_URL+"icons/twitter-icon.png"} alt="Instagram logo" />
@@ -8,29 +7,7 @@ const aboutMeIcon = <img src={process.env.PUBLIC_URL+"icons/about-me-icon.svg"} 
 const projectIcon = <img src={process.env.PUBLIC_URL+"icons/projects-icon.svg"} alt="project" className="nav-selc-icon" />
 const homePageIcon = <img src={process.env.PUBLIC_URL+"icons/home-page-icon.svg"} alt="hello" className="nav-selc-icon" />
 
-const MovingBox = (props) => {
-    const mesh = useRef()
-    const [hover, setHover] = useState(false);
-    const [active, setActive] = useState(false);
 
-    useFrame(() => {
-        mesh.current.rotation.x += 0.01
-        mesh.current.rotation.y += 0.01
-    })
-
-    return (
-        <mesh
-        {...props}
-        ref={mesh}
-        onPointerOver={event => setHover(true)}
-        onPointerOut={event => setHover(false)}
-        >
-            <boxGeometry args={[1, 2, 3]} />
-            <meshStandardMaterial color="#B3F2DD" />
-        </mesh>
-
-    )
-}
 
 
 const Navbar = (props) => {
@@ -43,12 +20,7 @@ const Navbar = (props) => {
         classNames[props.curPage]+= " nav-selc-link-on"
     }
   return <nav className="nav">
-      <div className="nav-cube-container">
-          <Canvas>
-            <ambientLight />
-            <MovingBox scale={[2.5, 1.5, 1]} />
-          </Canvas>
-      </div>
+      
       <Link to="/" className="text-link"><h2 className="title-text">Lucas <span className="text-s">Hoggan</span> </h2></Link>
         <div className="nav-selc">
             <Link to="/about-me" className={classNames["about-me"]}>{aboutMeIcon}</Link>
