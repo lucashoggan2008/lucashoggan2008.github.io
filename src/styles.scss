@@ -85,6 +85,13 @@ body {
     
 }
 
+.nav-cube-container {
+    width: 4rem;
+    aspect-ratio: 1;
+    background-color: $iris;
+    border: 2px solid $firefly;
+}
+
 /* 1.2 nav selection */
 
 .nav .nav-selc {
