@@ -26,7 +26,7 @@ const MovingBox = (props) => {
         onPointerOut={event => setHover(false)}
         >
             <boxGeometry args={[1, 2, 3]} />
-            <meshStandardMaterial color="ice cold" />
+            <meshStandardMaterial color="#B3F2DD" />
         </mesh>
 
     )
