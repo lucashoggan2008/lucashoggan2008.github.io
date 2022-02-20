@@ -65,7 +65,7 @@ body {
     justify-content: space-around;
     align-items: center;
     transition: border-bottom-color 300ms ease-out;
-    z-index: 1;
+    z-index: 2;
 }
 
 .nav:hover {
@@ -150,6 +150,17 @@ body {
     border: 1px solid $ice-cold
 }
 
+.navbar-title-text-link {
+    text-decoration: none;
+    transition: text-shadow 300ms ease-in;
+}
+
+.navbar-title-text-link:hover,
+.navbar-title-text-link:focus {
+    text-shadow: 3px 3px $tuscany;
+    
+}
+
 /* 2. pagebody */
 
 .page-body {
@@ -161,7 +172,7 @@ body {
 
 .page {
     width: 100%;
-    height: 100%;
+    height: 100%; 
 }
 
 /* 3. containers */
@@ -182,9 +193,10 @@ body {
     min-width: 50px;
     min-height: 50px;
     flex-grow: 1;
-    border: 2px solid $light-coral;
+    border: 4px solid $light-coral;
     transition: border-color 300ms ease-out;
     padding: 1rem;
+    z-index: 1;
 }
 
 .container-divider {
@@ -206,24 +218,27 @@ body {
     flex-grow: 1;
     min-height: 2rem;
     background-color: $wisteria-purple;
-    border: 2px solid $light-coral;
+    border: 4px solid $light-coral;
     transition: border-color 300ms ease-out;
     padding: 1rem;
     display: block;
     margin: 1.5rem;
     width: 100%;
+    z-index: 1;
 }
 
 .cube-container {
-    width: 4rem;
-    aspect-ratio: 1;
-    background-color: $iris;
-    border: 5px solid $seal-brown;
+    width: 100%;
+    height: 40%;
+    padding-bottom: 10rem;
     display: inline-flex;
     position: fixed;
     margin-top: 5rem;
     margin-left: 5px;
+    z-index: 0;
 }
+
+
 
 
 
@@ -282,6 +297,7 @@ body {
 
 
 .coin-marquee-item:hover {
+    z-index: 3;
     .coin-marquee-item-name {
         color: $wisteria-purple
     }
@@ -300,6 +316,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    z-index: 3;
 }
 
 .footer:hover,
@@ -313,6 +330,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    z-index: 3;
     .page-selc-link {
         color: white;
         margin: 0.2rem;

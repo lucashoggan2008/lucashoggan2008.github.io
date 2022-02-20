@@ -21,7 +21,7 @@ const Navbar = (props) => {
     }
   return <nav className="nav">
       
-      <Link to="/" className="text-link"><h2 className="title-text">Lucas <span className="text-s">Hoggan</span> </h2></Link>
+      <Link to="/" className="navbar-title-text-link"><h2 className="title-text">Lucas <span className="text-s">Hoggan</span> </h2></Link>
         <div className="nav-selc">
             <Link to="/about-me" className={classNames["about-me"]}>{aboutMeIcon}</Link>
             <Link to="/projects" className={classNames["projects"]}>{projectIcon}</Link>
