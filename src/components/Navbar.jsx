@@ -5,7 +5,7 @@ const facebookIcon = <img className="nav-selc-icon" src={process.env.PUBLIC_URL+
 const twitterIcon = <img className="nav-selc-icon"  src={process.env.PUBLIC_URL+"icons/twitter-icon.png"} alt="Instagram logo" />
 const aboutMeIcon = <img src={process.env.PUBLIC_URL+"icons/about-me-icon.svg"} alt="about me" className="nav-selc-icon" />
 const projectIcon = <img src={process.env.PUBLIC_URL+"icons/projects-icon.svg"} alt="project" className="nav-selc-icon" />
-const homePageIcon = <img src={process.env.PUBLIC_URL+"icons/home-page-icon.svg"} alt="hello" className="nav-selc-icon" />
+const homePageIcon = <img src={process.env.PUBLIC_URL+"icons/home-page-icon.svg"} alt="home" className="nav-selc-icon" />
 
 
 

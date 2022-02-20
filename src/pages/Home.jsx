@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import DragDiv from "../components/DragDiv";
 
 const Home = () => {
   return (
@@ -7,12 +8,12 @@ const Home = () => {
       
       <div className="page-body">
         <div className="container-holder">
-          <div className="page-title-container">
-            <h1 className="lrg-text-box text-center">
-              The Home of Lucas Hoggan
-            </h1>
-          </div>
-          <div className="container">
+          <DragDiv className="page-title-container">
+              <h1 className="lrg-text-box text-center">
+                The Home of Lucas Hoggan
+              </h1>
+          </DragDiv>
+          <DragDiv className="container">
             <h1 className="container-title">What Is This Site?</h1>
             <div className="container-divider"></div>
             <div className="text-holder">
@@ -23,8 +24,8 @@ const Home = () => {
                 project neither will it be my last.
               </div>
             </div>
-          </div>
-          <div className="container">
+          </DragDiv>
+          <DragDiv className="container">
             <div className="container-title">Who Am I?</div>
             <div className="container-divider"></div>
             <div className="text-holder">
@@ -35,7 +36,7 @@ const Home = () => {
                 About Me page of this website.
               </div>
             </div>
-          </div>
+          </DragDiv>
         </div>
       </div>
     </div>
